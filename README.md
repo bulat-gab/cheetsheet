@@ -31,3 +31,9 @@ Create a package from project foo.nuspec and the corresponding symbol package us
 `nuget pack foo.nuspec -Version 2.1.0`  
 `nuget pack foo.nuspec -Version 1.0.0 -MinClientVersion 2.5`  
 `nuget pack Package.nuspec -exclude "*.exe" -exclude "*.bat"`  
+
+
+## Git
+`git clean -n` - show which untracked files will be deleted  
+`git clean -f` - delete them  
+`git clean -fd` - delete directories  
