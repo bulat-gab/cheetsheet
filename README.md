@@ -9,11 +9,13 @@
 `docker build --pull -t myapp .` - builds docker image named _myapp_ from DockerFile in the current directory  
 `docker run --name myapp_sample --rm -it -p 8000:80 myapp` - runs docker container from myapp image. 8000 - outer port, 80 port inside container.  
 `docker stop myapp_sample -t <seconds>` - Stops the specified container. Time - seconds to wait for stop before killing it  
-docker ps – list all containers  
-docker stop $(docker ps -a -q) – stop all containers  
-docker rm $(docker ps -a -q) – remove all containers  
-docker images - list all docker images  
-docker rmi <image_id> – remove a docker image  
+`docker ps` – list all containers  
+`docker stop $(docker ps -a -q)` – stop all containers  
+`docker rm $(docker ps -a -q)` – remove all containers  
+`docker images` - list all docker images  
+`docker rmi <image_id>` – remove a docker image
+`docker system prune` - clean up any resources — images, containers, volumes, and networks — that are dangling (not associated with a container)  
+`docker system prune -a` -  additionally remove any stopped containers and all unused images  
 
 ## NuGet
 `nuget pack`  
