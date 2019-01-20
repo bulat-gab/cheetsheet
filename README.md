@@ -38,4 +38,9 @@ Create a package from project foo.nuspec and the corresponding symbol package us
 ## Git
 `git clean -n` - show which untracked files will be deleted  
 `git clean -f` - delete them  
-`git clean -fd` - delete directories  
+`git clean -fd` - delete directories
+
+#### Associate git repository with ssh key
+In Git Bash:  
+```eval `ssh-agent -s` ```   
+`ssh-add ~/.ssh/id_rsa`  
