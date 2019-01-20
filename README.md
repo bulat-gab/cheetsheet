@@ -13,7 +13,7 @@
 `docker stop $(docker ps -a -q)` – stop all containers  
 `docker rm $(docker ps -a -q)` – remove all containers  
 `docker images` - list all docker images  
-`docker rmi <image_id>` – remove a docker image
+`docker rmi <image_id>` – remove a docker image  
 `docker system prune` - clean up any resources — images, containers, volumes, and networks — that are dangling (not associated with a container)  
 `docker system prune -a` -  additionally remove any stopped containers and all unused images  
 
