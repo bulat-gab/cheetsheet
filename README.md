@@ -6,8 +6,8 @@
 `docker ps` - list running containers  
 `docker ps -a` - list all containers
 
-`docker build --rm --pull -t myapp .` - builds docker image named _myapp_ from DockerFile in the current directory. Removes intermediary created images.    
-`docker run --name myapp_sample --rm -it -p 8000:80 myapp` - runs docker container from myapp image. 8000 - outer port, 80 port inside container.  
+`docker build --rm --pull -t myapp .` - builds docker image named _myapp_ from DockerFile in the current directory; removes intermediary created images.    
+`docker run --name myapp_sample --rm -it -p 8000:80 myapp` - runs docker container from myapp image. 8000 - outer port, 80 port inside container; cleans up container's file system after exit.  
 `docker stop myapp_sample -t <seconds>` - Stops the specified container. Time - seconds to wait for stop before killing it  
 `docker ps` – list all containers  
 `docker stop $(docker ps -a -q)` – stop all containers  
