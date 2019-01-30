@@ -1,7 +1,7 @@
 # cheetsheet
 
 ## docker 
-[DockerFile example](./DockerFile.md)
+[DockerFile example](./DockerFile)
 
 `docker pull` - get container from Docker Hub  
 `docker ps` - list running containers  
