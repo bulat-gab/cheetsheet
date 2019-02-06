@@ -45,4 +45,5 @@ Create a package from project foo.nuspec and the corresponding symbol package us
 #### Associate git repository with ssh key
 In Git Bash:  
 ```eval `ssh-agent -s` ```   
+`ssh-keygen -t rsa -b 4096 -C "email@email.com"`  
 `ssh-add ~/.ssh/id_rsa`  
