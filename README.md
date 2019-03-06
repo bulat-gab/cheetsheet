@@ -38,6 +38,7 @@ Create a package from project foo.nuspec and the corresponding symbol package us
 
 
 ## Git
+`git fetch origin --prune` - delete old origin branches  
 `git clean -n` - show which untracked files will be deleted  
 `git clean -f` - delete them  
 `git clean -fd` - delete directories
