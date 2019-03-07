@@ -50,4 +50,5 @@ In Git Bash:
 `ssh-add ~/.ssh/id_rsa`  
 
 ## MongoDB
-`mongodump --host mongodb1.example.net:27017 -d MyDatabase -c MyCollection --username user --password "pass" --out /opt/backup/mongodump-2013-10-24` - dump database/collection  
+`mongodump -h example.com:27017 -d MyDb -c MyCol -u username -p "password" -o /backup/mongodump-2013-10-24` - dump database or collection  
+`mongorestore -h example.com:27017 -d MyDb -c MyCol` - restore dumped  
