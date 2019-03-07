@@ -1,6 +1,6 @@
 # cheetsheet
 
-#### [MongoDb](./MongoDB)
+#### [MongoDb](./MongoDB.md)
 
 ## docker 
 [DockerFile example](./DockerFile)
