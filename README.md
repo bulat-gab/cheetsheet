@@ -20,11 +20,8 @@
 `docker system prune -a` -  additionally remove any stopped containers and all unused images  
 
 ## NuGet
-`nuget pack`  
-`nuget pack foo.nuspec`  
-`nuget pack foo.csproj`  
-`nuget pack foo.csproj -Properties Configuration=Release`  
-`nuget pack foo.csproj -Build -Symbols -Properties owners=janedoe,xiaop;version="1.0.5"`  
+`nuget pack foo.nuspec`   
+`nuget pack foo.csproj -Build -Symbols -Properties Configuration=Release;owners=janedoe,xiaop;version="1.0.5"`  
 
 Create a package from project foo.csproj, using MSBuild version 12 to build the project  
 `nuget pack foo.csproj -Build -Symbols -MSBuildVersion 12 -Properties owners=janedoe,xiaop;version="1.0.5`  
@@ -32,9 +29,7 @@ Create a package from project foo.csproj, using MSBuild version 12 to build the 
 Create a package from project foo.nuspec and the corresponding symbol package using the new recommended format .snupkg  
 `nuget pack foo.nuspec -Symbols -SymbolPackageFormat snupkg`  
 
-`nuget pack foo.nuspec -Version 2.1.0`  
-`nuget pack foo.nuspec -Version 1.0.0 -MinClientVersion 2.5`  
-`nuget pack Package.nuspec -exclude "*.exe" -exclude "*.bat"`  
+`nuget pack Package.nuspec -Version 1.0.0 -MinClientVersion 2.5 -exclude "*.exe" -exclude "*.bat"`  
 
 
 ## Git
