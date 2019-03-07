@@ -1,7 +1,7 @@
 `mongodump -h example.com:27017 -d MyDb -c MyCol -u username -p "password" -o /backup/mongodump-2013-10-24` - dump database or collection  
 `mongorestore -h example.com:27017 -d MyDb -c MyCol` - restore dumped  
 
-### Aggregate, count group size, sort by descending, remove _id field and save result into MyCol collection
+##### Aggregate, count group size, sort by descending, remove _id field and save result into MyCol collection
 ```javascript
 db.getCollection('Documents').aggregate([
     {
