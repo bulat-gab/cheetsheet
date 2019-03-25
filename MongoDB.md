@@ -1,8 +1,13 @@
 ## MongoDB
 ### MongoDB tools
 
+#### BSON backups
 `mongodump -h example.com:27017 -d MyDb -c MyCol -u username -p "password" -o /backup/mongodump-2013-10-24` - dump database or collection  
 `mongorestore -h example.com:27017 -d MyDb -c MyCol` - restore dumped  
+
+#### JSON backups
+`mongoimport -d MyDb -c MyCol ` - import as JSON
+
 
 ### Mongo Query Language(MQL)
 
