@@ -1,12 +1,14 @@
 ## MongoDB
 ### MongoDB tools
 
+`mongo --shell uuidhelpers.js` - load helper functions
+
 #### BSON backups
 `mongodump -h example.com:27017 -d MyDb -c MyCol -u username -p "password" -o /backup/mongodump-2013-10-24` - dump database or collection  
 `mongorestore -h example.com:27017 -d MyDb -c MyCol` - restore dumped  
 
 #### JSON backups
-`mongoimport -d MyDb -c MyCol ` - import as JSON
+`mongoimport -d MyDb -c MyCol --file fileName.json` - import as JSON
 
 
 ### Mongo Query Language(MQL)
