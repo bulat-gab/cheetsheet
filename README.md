@@ -44,6 +44,11 @@ Create a package from project foo.nuspec and the corresponding symbol package us
 `git rebase --preserve-merges -i HEAD~5` - rebase and show merge commits  
 `git rebase -i --root` - rebase onto first commit  
 
+#### Undo rebase
+`git reflog`  
+Suppose the old commit was HEAD@{5} in the ref log:  
+`git reset --hard HEAD@{5}`  or `git reset --hard "HEAD@{5}"` under Windows  
+
 #### Associate git repository with ssh key
 In Git Bash:  
 ```eval `ssh-agent -s` ```   
