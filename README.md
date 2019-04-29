@@ -6,10 +6,11 @@
 ## docker 
 [DockerFile example](./DockerFile)
 
-`docker pull` - get container from Docker Hub  
-`docker ps` - list running containers  
+`docker pull name:version` - get container from Docker Hub  
+`docker ps` - list only running containers  
 `docker ps -a` - list all containers
 
+`docker exec -it cont_name bash` - enter bash shell inside a container   
 `docker build --rm --pull -t <image name> .` - builds docker image from DockerFile in the current directory; removes intermediary created images.    
 `docker run --name <container name> --rm -it -p 8000:80 <image name>` - runs docker container from image. 8000 - outer port, 80 port inside container; cleans up container's file system after exit    
 `docker exec -it <container name> bash` - connects to a running container  
