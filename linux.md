@@ -1,4 +1,4 @@
-`sudo chown -R $USER:$USER ~/.config/Code` - allow writing configs into home directory
+`sudo chown -R $USER:$USER ~/.config/Code` - allow writing configs into home directory  
 `sudo apt-get install network-manager-openvpn-gnome` - open vpn 
 
 
