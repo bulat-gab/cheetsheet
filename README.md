@@ -41,7 +41,7 @@ Create a package from project foo.nuspec and the corresponding symbol package us
 `git clean -n` - show which untracked files will be deleted  
 `git clean -f` - delete them  
 `git clean -fd` - delete directories  
-`git push origin dev:master` - push local dev branch to origin/master
+`git push origin dev:master` - push local dev branch to origin/master  
 `git rebase --preserve-merges -i HEAD~5` - rebase and show merge commits  
 `git rebase -i --root` - rebase onto first commit  
 
