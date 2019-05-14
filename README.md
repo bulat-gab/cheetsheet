@@ -45,12 +45,20 @@ Create a package from project foo.nuspec and the corresponding symbol package us
 `git rebase --preserve-merges -i HEAD~5` - rebase and show merge commits  
 `git rebase -i --root` - rebase onto first commit  
 
-#### Undo rebase
+### Delete merged branches from local store
+`git branch --merged| egrep -v "(^\*|master|develop|dev)"` - shows merged branches, excluding _master, develop and dev_
+`git branch --merged| egrep -v "(^\*|master|develop|dev)" | xargs git branch -d` - deletes   
+
+#### On Windows
+`git branch --merged | grep -E -v "(master|develop|dev)"`  
+`git branch --merged | grep -E -v "(master|develop|dev)" | xargs git branch -d`
+
+### Undo rebase
 `git reflog`  
 Suppose the old commit was HEAD@{5} in the ref log:  
 `git reset --hard HEAD@{5}`  or `git reset --hard "HEAD@{5}"` under Windows  
 
-#### Associate git repository with ssh key
+### Associate git repository with ssh key
 In Git Bash:  
 ```eval `ssh-agent -s` ```   
 `ssh-keygen -t rsa -b 4096 -C "email@email.com"`  
