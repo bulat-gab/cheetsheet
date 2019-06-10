@@ -39,3 +39,13 @@ db.getCollection('Documents').aggregate([
     {$out : "MyCol"}
 ], {allowDiskUse : true})
 ```
+
+##### Drop dbs that start with 'Test'
+```javascript 
+var mongo = db.getMongo();
+mongo.getDBNames().filter(n => n != 'admin' && n != 'local' && n != 'config' && n.startsWith('Test'))
+    .forEach( dbName => { 
+        var db = mongo.getDB(dbName); 
+        db.dropDatabase();
+     });
+```
