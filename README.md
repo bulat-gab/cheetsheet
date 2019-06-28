@@ -44,6 +44,7 @@ Create a package from project foo.nuspec and the corresponding symbol package us
 `git push origin dev:master` - push local dev branch to origin/master  
 `git rebase --preserve-merges -i HEAD~5` - rebase and show merge commits  
 `git rebase -i --root` - rebase onto first commit  
+`git rm -r --cached .` - Ignore already commited files  
 
 ### Delete merged branches from local store
 `git branch --merged| egrep -v "(^\*|master|develop|dev)"` - shows merged branches, excluding _master, develop and dev_
