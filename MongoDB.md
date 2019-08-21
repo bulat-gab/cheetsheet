@@ -49,3 +49,8 @@ mongo.getDBNames().filter(n => n != 'admin' && n != 'local' && n != 'config' && 
         db.dropDatabase();
      });
 ```
+
+##### Find NOT empty array
+```javasript
+ME.find({ pictures: { $exists: true, $ne: [] } })
+```
