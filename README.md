@@ -46,3 +46,7 @@ In Git Bash:
 ```eval `ssh-agent -s` ```   
 `ssh-keygen -t rsa -b 4096 -C "gabdrakhmanov.br@gmail.com"`  
 `ssh-add ~/.ssh/id_rsa`  
+
+
+## PowerShell
+`rm C:\path\to\folder -r -fo` - `rm -rf` equivalent
