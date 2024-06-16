@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Configuring git
 git config --global alias.co checkout
 git config --global alias.br branch
