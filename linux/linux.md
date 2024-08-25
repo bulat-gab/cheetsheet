@@ -8,9 +8,10 @@
 
 ## Configure newly installed Ubuntu
 
-#### [config-ubuntu.sh](./linux/config-ubuntu.sh)
-#### [python3.10-ubuntu.sh](./linux/python3.10-ubuntu.sh)
+#### [config-ubuntu.sh](./config-ubuntu.sh)
+
+#### [python3.10-ubuntu.sh](./python3.10-ubuntu.sh)
 
 ## Install Virtual Box guest additions
 
-#### [virtual-box-install-guest-additions.sh](./linux/virtual-box-install-guest-additions.sh)
+#### [virtual-box-install-guest-additions.sh](./virtual-box-install-guest-additions.sh)
