@@ -19,9 +19,14 @@
 
 # VMware
 ## Mount shared folder
+### To make it persistent
+
+Edit the file: `sudo nano /etc/fstab` and add this line:  
+`.host:/    /mnt/hgfs/    fuse.vmhgfs-fuse    defaults,allow_other,uid=1000     0    0`
+
 Shared folder location on Guest: `/mnt/hgfs/{Folder_Name}`
 
-`sudo vmhgfs-fuse .host:/ /mnt/hgfs/ -o allow_other -o uid=1000`
+Mount: `sudo vmhgfs-fuse .host:/ /mnt/hgfs/ -o allow_other -o uid=1000`
 
 If the `hgfs` directory doesn't exist, try:  
 `sudo vmhgfs-fuse .host:/ /mnt/ -o allow_other -o uid=1000`
