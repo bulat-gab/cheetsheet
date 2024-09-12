@@ -15,3 +15,13 @@
 ## Install Virtual Box guest additions
 
 #### [virtual-box-install-guest-additions.sh](./virtual-box-install-guest-additions.sh)
+
+
+# VMware
+## Mount shared folder
+Shared folder location on Guest: `/mnt/hgfs/{Folder_Name}`
+
+`sudo vmhgfs-fuse .host:/ /mnt/hgfs/ -o allow_other -o uid=1000`
+
+If the `hgfs` directory doesn't exist, try:  
+`sudo vmhgfs-fuse .host:/ /mnt/ -o allow_other -o uid=1000`
