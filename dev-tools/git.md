@@ -28,6 +28,6 @@ Suppose the old commit was HEAD@{5} in the ref log:
 ### Associate git repository with ssh key
 
 In Git Bash:  
-`` eval `ssh-agent -s`  ``  
-`ssh-keygen -t rsa -b 4096 -C "gabdrakhmanov.br@gmail.com"`  
+`` eval `ssh-agent -s`  ``    
+`ssh-keygen -t ed25519 -C "gabdrakhmanov.br@gmail.com"`
 `ssh-add ~/.ssh/id_rsa`
