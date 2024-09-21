@@ -29,5 +29,5 @@ Suppose the old commit was HEAD@{5} in the ref log:
 
 In Git Bash:  
 `` eval `ssh-agent -s`  ``    
-`ssh-keygen -t ed25519 -C "gabdrakhmanov.br@gmail.com"`
+`ssh-keygen -t ed25519 -C "gabdrakhmanov.br@gmail.com"`  
 `ssh-add ~/.ssh/id_rsa`
