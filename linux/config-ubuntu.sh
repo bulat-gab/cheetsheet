@@ -17,7 +17,7 @@ git config --global user.email "gabdrakhmanov.br@gmail.com"
 git config --global core.editor "code --wait"
 
 # eval `ssh-agent -s` 
-# ssh-keygen -t rsa -b 4096 -C "gabdrakhmanov.br@gmail.com"  -f ~/.ssh/github_rsa
+# ssh-keygen -t ed25519  -C "gabdrakhmanov.br@gmail.com"  -f ~/.ssh/github_rsa
 # ssh-add ~/.ssh/github_rsa
 
 echo  'alias gs="git status"' >> ~/.bashrc 
