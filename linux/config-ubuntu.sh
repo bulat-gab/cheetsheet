@@ -23,3 +23,7 @@ git config --global core.editor "code --wait"
 echo  'alias gs="git status"' >> ~/.bashrc 
 
 # Configuring docker
+## Run docker without 'sudo'
+sudo groupadd docker # create a docker group
+sudo usermod -aG docker $USER # add current USER to docker group
+newgrp docker # apply changes
