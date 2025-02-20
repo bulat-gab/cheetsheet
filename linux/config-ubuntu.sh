@@ -23,13 +23,3 @@ git config --global core.editor "code --wait"
 echo  'alias gs="git status"' >> ~/.bashrc 
 
 # Configuring docker
-if [ -x "$(command -v docker)" ]; then
-    echo "Docker found. Adding docker group and configuring startup"
-    sudo systemctl enable docker
-    sudo groupadd docker
-    sudo usermod -aG docker $USER
-    echo "Done. Logout to apply changes."
-else
-    echo "Docker is not found."
-    # command
-fi
