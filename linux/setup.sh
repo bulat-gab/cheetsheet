@@ -33,6 +33,7 @@ function install_google_chrome() {
     if command -v google-chrome > /dev/null; then
         echo "Google Chrome is already installed."
         return
+    fi
 
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     sudo dpkg -i google-chrome-stable_current_amd64.deb
@@ -43,6 +44,7 @@ function install_node() {
     if command -v node > /dev/null; then
         echo "Node.js is already installed."
         return
+    fi
 
     curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
     sudo apt-get install -y nodejs || true
