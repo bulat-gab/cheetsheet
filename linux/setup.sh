@@ -1,4 +1,7 @@
 #!/bin/sh
+# URL of this file:
+# https://raw.githubusercontent.com/bulat-gab/cheetsheet/refs/heads/main/linux/setup.sh
+
 
 GITHUB_EMAIL="14952031+bulat-gab@users.noreply.github.com"
 GITHUB_USER="Bulat G"
@@ -24,6 +27,7 @@ ssh-keygen -t ed25519  -C $GITHUB_EMAIL  -f ~/.ssh/github_rsa
 ssh-add ~/.ssh/github_rsa
 
 echo  'alias gs="git status"' >> ~/.bashrc 
+echo  'alias cls="clear"' >> ~/.bashrc 
 
 function install_google_chrome() {
     if command -v google-chrome > /dev/null; then
