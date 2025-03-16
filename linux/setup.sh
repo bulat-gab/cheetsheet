@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # URL of this file:
 # https://raw.githubusercontent.com/bulat-gab/cheetsheet/refs/heads/main/linux/setup.sh
 
@@ -23,11 +23,19 @@ git config --global user.email $GITHUB_EMAIL
 git config --global core.editor "code --wait"
 
 eval `ssh-agent -s` 
-ssh-keygen -t ed25519  -C $GITHUB_EMAIL  -f ~/.ssh/github_rsa
+if [ ! -f ~/.ssh/github_rsa ]; then
+    ssh-keygen -t ed25519 -C "$GITHUB_EMAIL" -f ~/.ssh/github_rsa -N ""
+else
+    echo "SSH key already exists, skipping..."
+fi
+
 ssh-add ~/.ssh/github_rsa
 
-echo  'alias gs="git status"' >> ~/.bashrc 
-echo  'alias cls="clear"' >> ~/.bashrc 
+# Aliases
+## Check if it exists first to prevent duplicate entries
+grep -qxF 'alias gs="git status"' ~/.bashrc || echo 'alias gs="git status"' >> ~/.bashrc
+grep -qxF 'alias cls="clear"' ~/.bashrc || echo 'alias cls="clear"' >> ~/.bashrc
+
 
 function install_google_chrome() {
     if command -v google-chrome > /dev/null; then
@@ -56,6 +64,7 @@ function install_docker() {
     if command -v docker > /dev/null; then
         echo "Docker is already installed."
         return
+    fi
 
     # Source: https://docs.docker.com/engine/install/ubuntu/
 
@@ -83,7 +92,7 @@ function install_docker() {
     newgrp docker # apply changes
 }
 
-function delete_ghostcript() {
+function delete_ghostscript() {
     # Ghostscript's alias gs is conflicting with my git status alias
     # I do not use Ghostscript, so I am removing it
 
@@ -122,7 +131,7 @@ function setup() {
     install_node
     install_docker
 
-    delete_ghostcript
+    delete_ghostscript
 
     install_soft
 
@@ -138,3 +147,5 @@ function setup() {
     echo "git email: $(git config --global user.email)"
     echo ""
 }
+
+setup
