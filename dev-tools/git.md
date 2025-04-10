@@ -31,6 +31,7 @@ In Git Bash:
 `` eval `ssh-agent -s`  ``  
 `ssh-keygen -t ed25519 -C "ENTER_YOUR_EMAIL"`  
 `ssh-add ~/.ssh/id_rsa`
+`ssh -T git@github.com` - test connection
 
 ## Add git config per folder
 
