@@ -6,6 +6,7 @@
     iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 # Install soft
+```
 choco install chocolateygui -fy
 choco install autohotkey -fy
 choco install googlechrome -fy
@@ -23,6 +24,21 @@ choco install discord -fy
 choco install vscode -fy
 choco install jetbrains-rider
 choco install visualstudio2022community
+
+choco install nuget.commandline -fy
+choco install putty -fy
+choco install rdcman -fy # remote desktop connection manager
+choco install slack -fy
+choco install sql-server-management-studio -fy
+choco install vswhere -fy
+choco install wintail -fy
+choco install nvm -fy
+choco install openssl -fy
+choco install postman -fy
+choco install powershellhere -fy
+choco install powershellhere-elevated -fy
+choco install winscp -fy
+```
 
 # Configure GIT
 # Configuring git
