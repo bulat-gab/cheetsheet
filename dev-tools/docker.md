@@ -17,3 +17,4 @@
 `docker rmi <image_id>` – remove a docker image  
 `docker system prune` - clean up any resources — images, containers, volumes, and networks — that are dangling (not associated with a container)  
 `docker system prune -a` -  additionally remove any stopped containers and all unused images  
+`docker stop $(docker ps -q)` - stop all running containers  

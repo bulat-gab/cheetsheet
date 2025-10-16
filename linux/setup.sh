@@ -119,6 +119,25 @@ function install_soft() {
     sudo apt install -y lf tmux htop
 }
 
+lf_set_hidden() {
+    local lfrc="$HOME/.config/lf/lfrc"
+
+    # Create config directory if missing
+    mkdir -p "$(dirname "$lfrc")"
+
+    # Create the config file if missing
+    touch "$lfrc"
+
+    # Check if "set hidden" already exists
+    if grep -q "^set hidden" "$lfrc"; then
+        echo "'set hidden' is already present in $lfrc"
+    else
+        echo "set hidden" >> "$lfrc"
+        echo "'set hidden' has been added to $lfrc"
+    fi
+}
+
+
 function setup() {
     sudo apt update
     sudo apt upgrade -y

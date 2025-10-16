@@ -19,11 +19,6 @@
 `git branch --merged | grep -E -v "(master|develop|dev)"`  
 `git branch --merged | grep -E -v "(master|develop|dev)" | xargs git branch -d`
 
-### Undo rebase
-
-`git reflog`  
-Suppose the old commit was HEAD@{5} in the ref log:  
-`git reset --hard HEAD@{5}` or `git reset --hard "HEAD@{5}"` under Windows
 
 ### Associate git repository with ssh key
 
@@ -49,3 +44,21 @@ File `.gitconfig.personal`:
     name = MY_MANE
     email = MY_EMAIL
 ```
+
+
+## Rebasing
+### Undo rebase
+
+`git reflog`  
+Suppose the old commit was HEAD@{5} in the ref log:  
+`git reset --hard HEAD@{5}` or `git reset --hard "HEAD@{5}"` under Windows
+
+### Merge conflicts
+Suppose you are rebasing your feature branch onto main/dev
+`git switch my-feature`  
+`git rebase main`  
+
+Encountered conflicts in file:  
+`git checkout --ours .` - to accept all changes from main branch  
+`git checkout --theirs .` - to accept all changes from feature branch  
+`git checkout --ours src/myfile.js` - apply changes to a single file
